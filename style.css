@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+:root{
+    --color-primary: #219ebc;
+    --color-danger: #e63946;
+    --color-success: #2a9d8f;
+    --color-warning: #fb8500;
+    --color-dark: #023047;
+    --color-light: #dde4e7;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-info-light: #e5e5e5;
+    --color-info-dark: #8d99ae;
+    --color-primary-varient: #84a98c;
+    --color-dark-varient: #264653;
+    --color-background: #f8f9fa;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow-1: 0 2rem 3rem var(--color-light);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    appearance: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+html{
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+}
+
+a{
+    color: var(--color-dark);
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+h4{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+h5{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+h6{
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+small{
+    font-size: 0.6rem;
+    font-weight: 300;
+}
+
+.profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.text-muted{
+    color: var(--color-info-dark);
+}
+
+.primary{
+    color: var(--color-primary);
+}
+
+.primary-varient{
+    color: var(--color-primary-varient);
+}
+
+.danger{
+    color: var(--color-danger);
+}
+
+.success{
+    color: var(--color-success);
+}
+
+.warning{
+    color: var(--color-warning);
+}
+
+p{
+    color: var(--color-dark-varient);
+}
+
+b{
+    color: var(--color-dark);
+}
+
+.container{
+    display: grid;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* sidebar */
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 96vh;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow-1);
+    z-index: 100;
+    padding-left: 1rem;
+}
+
+.sidebar-top{
+   display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 2rem;
+}
+
+.sidebar-top .logo{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-top .logo i{
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.sidebar-top .logo span{
+    font-weight: 500;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.sidebar-top .logo span:hover{
+    color: var(--color-primary-varient);
+}
+
+.sidebar .sidebar-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.sidebar .sidebar-nav .nav-item a{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    height: 3.7rem;
+    cursor: pointer;
+    color: var(--color-info-dark);
+    margin-left: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar .sidebar-nav .nav-item a.active{
+    position: relative;
+    padding: 0 0.5rem;
+    color: var(--color-primary);
+    margin-left: 0rem;
+    background-color: var(--color-light);
+}
+
+.sidebar .sidebar-nav .nav-item a.active::before{
+    content: "";
+    height: 100%;
+    width: 0.5rem;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 0;
+    left: -0.5rem;
+}
+
+.sidebar .sidebar-nav .nav-item a.active i{
+    margin-left: calc(2rem - 6px);
+}
+
+.sidebar .sidebar-nav .nav-item a:hover span{
+    color: var(--color-primary);
+    margin-left: 0.5rem;
+}
+
+.sidebar .sidebar-nav .nav-item a span.nav-badge{
+    background-color: var(--color-danger);
+    padding: 0.2rem 1rem;
+    border-radius: var(--border-radius-1);
+    color: var(--color-white);
+    margin-left: 0.5rem;
+}
+
+.sidebar .sidebar-nav .nav-item:last-child{
+    position: absolute;
+    bottom: 2rem;
+}
