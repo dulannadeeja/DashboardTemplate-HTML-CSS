@@ -102,7 +102,7 @@
       <main>
         <h1>Dashboard</h1>
         <div class="date">
-            <input type="date" name="date" id="date">
+          <input type="date" name="date" id="date" />
         </div>
         <!--START INSIGHTS SECTION -->
         <section class="insights-section">
@@ -127,78 +127,167 @@
             </div> -->
           </div>
           <div class="insights-bottom">
-
             <!-- start sales insight-->
             <div class="insights-bottom-item">
-                <div class="insight-card sales">
-                  <div class="insight-info">
-                    <div class="insight-icon">
-                      <i class="material-icons"> analytics </i>
-                    </div>
-                    <h4>Total Sales</h4>
-                    <h2>$12,250</h2>
-                    <small class="text-muted">last 24 hours</small>
+              <div class="insight-card sales">
+                <div class="insight-info">
+                  <div class="insight-icon">
+                    <i class="material-icons"> analytics </i>
                   </div>
-                  <div class="progress">
-                    <svg viewBox="0 0 100 100">
-                      <circle cx="50" cy="50" r="40" />
-                    </svg>
-                    <div class="precentage">
-                      <h2>75<span>%</span></h2>
-                    </div>
+                  <h4>Total Sales</h4>
+                  <h2>$12,250</h2>
+                  <small class="text-muted">last 24 hours</small>
+                </div>
+                <div class="progress">
+                  <svg viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" />
+                  </svg>
+                  <div class="precentage">
+                    <h2>75<span>%</span></h2>
                   </div>
                 </div>
               </div>
-                <!-- end sales insight-->
+            </div>
+            <!-- end sales insight-->
 
-                <!-- start expenses insight-->
-              <div class="insights-bottom-item">
-                <div class="insight-card expenses">
-                  <div class="insight-info">
-                    <div class="insight-icon">
-                      <i class="material-icons"> bar_chart </i>
-                    </div>
-                    <h4>Total Expenses</h4>
-                    <h2>$10,377</h2>
-                    <small>last 24 hours</small>
+            <!-- start expenses insight-->
+            <div class="insights-bottom-item">
+              <div class="insight-card expenses">
+                <div class="insight-info">
+                  <div class="insight-icon">
+                    <i class="material-icons"> bar_chart </i>
                   </div>
-                  <div class="progress">
-                    <svg viewBox="0 0 100 100">
-                      <circle cx="50" cy="50" r="40" />
-                    </svg>
-                    <div class="precentage">
-                      <h2>25<span>%</span></h2>
-                    </div>
+                  <h4>Total Expenses</h4>
+                  <h2>$10,377</h2>
+                  <small>last 24 hours</small>
+                </div>
+                <div class="progress">
+                  <svg viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" />
+                  </svg>
+                  <div class="precentage">
+                    <h2>25<span>%</span></h2>
                   </div>
                 </div>
               </div>
-                <!-- end expenses insight-->
+            </div>
+            <!-- end expenses insight-->
 
-                <!-- start income insight-->
-              <div class="insights-bottom-item">
-                <div class="insight-card income">
-                  <div class="insight-info">
-                    <div class="insight-icon">
-                      <i class="material-icons"> stacked_line_chart </i>
-                    </div>
-                    <h4>Total Income</h4>
-                    <h2>$1,869</h2>
-                    <small>last 24 hours</small>
+            <!-- start income insight-->
+            <div class="insights-bottom-item">
+              <div class="insight-card income">
+                <div class="insight-info">
+                  <div class="insight-icon">
+                    <i class="material-icons"> stacked_line_chart </i>
                   </div>
-                  <div class="progress">
-                    <svg viewBox="0 0 100 100">
-                      <circle cx="50" cy="50" r="40" />
-                    </svg>
-                    <div class="precentage">
-                      <h2>65<span>%</span></h2>
-                    </div>
+                  <h4>Total Income</h4>
+                  <h2>$1,869</h2>
+                  <small>last 24 hours</small>
+                </div>
+                <div class="progress">
+                  <svg viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" />
+                  </svg>
+                  <div class="precentage">
+                    <h2>65<span>%</span></h2>
                   </div>
                 </div>
               </div>
-                <!-- end income insight-->
+            </div>
+            <!-- end income insight-->
           </div>
         </section>
         <!--END INSIGHTS SECTION -->
+
+        <!-- START RECENT ORDERS SECTION -->
+        <section class="recent-orders-section">
+          <div class="recent-orders-top">
+            <div class="recent-orders-top-left">
+              <h2>Recent Orders</h2>
+              <p>Overview of your recent orders</p>
+            </div>
+            <!-- <div class="recent-orders-top-right">
+                        <div class="recent-orders-top-right-item">
+                            <i class="material-icons"> arrow_back </i>
+                            <span>Previous</span>
+                        </div>
+                        <div class="recent-orders-top-right-item">
+                            <span>Today</span>
+                            <i class="material-icons"> arrow_drop_down </i>
+                        </div>
+                        <div class="recent-orders-top-right-item">
+                            <span>Next</span>
+                            <i class="material-icons"> arrow_forward </i>
+                        </div>
+                    </div> -->
+          </div>
+          <div class="recent-orders-bottom">
+            <table class="recent-order-card">
+              <thead>
+                <tr>
+                  <th>Product Name</th>
+                  <th>Product ID</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>DJI Mavic 2 Pro</td>
+                  <td>DJI-M2PRO-001</td>
+                  <td>$1499.00</td>
+                  <td>1</td>
+                  <td class="success">Shipped</td>
+                  <td ><a href="" class="table-link">details</a></td>
+                </tr>
+                <tr>
+                  <td>DJI Mavic 2 Zoom</td>
+                  <td>DJI-M2ZOOM-001</td>
+                  <td>$1299.00</td>
+                  <td>2</td>
+                  <td class="danger">Pending</td>
+                  <td ><a href="" class="table-link">details</a></td>
+                </tr>
+                <tr>
+                  <td>DJI Mavic Air 2</td>
+                  <td>DJI-MAIR2-001</td>
+                  <td>$799.00</td>
+                  <td>3</td>
+                  <td class="text-muted">Delivered</td>
+                  <td ><a href="" class="table-link">details</a></td>
+                </tr>
+                <tr>
+                  <td>DJI Mavic Mini</td>
+                  <td>DJI-MINI-001</td>
+                  <td>$399.00</td>
+                  <td>4</td>
+                  <td class="success">Shipped</td>
+                  <td ><a href="" class="table-link">details</a></td>
+                </tr>
+                <tr>
+                  <td>DJI Mavic Air</td>
+                  <td>DJI-MAIR-001</td>
+                  <td>$599.00</td>
+                  <td>1</td>
+                  <td class="warning">Processing</td>
+                  <td ><a href="" class="table-link">details</a></td>
+                </tr>
+                <tr>
+                  <td>DJI Mavic Pro</td>
+                  <td>DJI-PRO-001</td>
+                  <td>$999.00</td>
+                  <td>2</td>
+                  <td class="text-muted">Delivered</td>
+                  <td ><a href="" class="table-link">details</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="">Show All</a>
+          </div>
+        </section>
+        <!-- END RECENT ORDERS SECTION -->
       </main>
       <!-- END MAIN -->
 

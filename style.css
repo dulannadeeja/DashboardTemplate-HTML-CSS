@@ -54,7 +54,10 @@ body{
 }
 
 a{
-    color: var(--color-dark);
+    color: var(--color-primary);
+}
+a:hover{
+    color: var(--color-primary-varient);
 }
 
 img{
@@ -107,27 +110,27 @@ small{
 }
 
 .text-muted{
-    color: var(--color-info-dark);
+    color: var(--color-info-dark) !important;
 }
 
 .primary{
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
 }
 
 .primary-varient{
-    color: var(--color-primary-varient);
+    color: var(--color-primary-varient) !important;
 }
 
 .danger{
-    color: var(--color-danger);
+    color: var(--color-danger) !important;
 }
 
 .success{
-    color: var(--color-success);
+    color: var(--color-success) !important;
 }
 
 .warning{
-    color: var(--color-warning);
+    color: var(--color-warning) !important;
 }
 
 p{
@@ -331,7 +334,7 @@ main .date input[type="date"]{
 
 .insights-section .insights-bottom{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
 }
 
@@ -381,4 +384,50 @@ main .date input[type="date"]{
 .insights-section .insights-bottom .insight-card .progress .precentage span{
     font-size: 1rem;
     font-weight: 600;
+}
+
+/* recent orders section */
+
+.recent-orders-section .recent-orders-top{
+    margin: 2rem 0;
+}
+
+.recent-orders-section .recent-orders-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.recent-orders-section .recent-orders-bottom .recent-order-card{
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow-1);
+    border-radius: var(--card-border-radius);
+    padding: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.recent-orders-section .recent-orders-bottom .recent-order-card:hover{
+    box-shadow: none;
+}
+
+.recent-orders-section .recent-orders-bottom table {
+    width: 100%;
+    text-align: center;
+}
+.recent-orders-section .recent-orders-bottom table thead{
+    padding: 5rem
+}
+
+.recent-orders-section .recent-orders-bottom table tbody td{
+    color: var(--color-dark-varient);
+   height: 3rem;
+   border-bottom: 1px solid var(--color-light);
+}
+.recent-orders-section .recent-orders-bottom table tbody td:last-child{
+   border-bottom: none;
+}
+
+.recent-orders-section .recent-orders-bottom table tbody tr:last-child td{
+    border:none;
 }
