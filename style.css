@@ -24,6 +24,8 @@
 
     --box-shadow-1: 0 2rem 3rem var(--color-light);
 
+    --default-font-family:'Poppins', sans-serif;
+
 }
 
 *{
@@ -39,7 +41,7 @@
 
 html{
     font-size: 14px;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--default-font-family);
     scroll-behavior: smooth;
 }
 
@@ -139,9 +141,8 @@ b{
 .container{
     display: grid;
     gap: 1.8rem;
-    grid-template-columns: 14rem auto 23rem;
-    width: 100%;
-    max-width: 1200px;
+    grid-template-columns: 17rem auto 23rem;
+    width: 90%;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
@@ -151,9 +152,6 @@ b{
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
     height: 96vh;
     background-color: var(--color-white);
     box-shadow: var(--box-shadow-1);
@@ -251,5 +249,136 @@ b{
 
 .sidebar .sidebar-nav .nav-item:last-child{
     position: absolute;
-    bottom: 2rem;
+    bottom: 4rem;
+}
+
+/* main section */
+
+main{
+    margin: 1.4rem;
+}
+
+main .date{
+    display: inline-block;
+    background-color: var(--color-light);
+    border-radius: var(--border-radius-1);
+    padding: 0.5rem 1.6rem;
+    margin: 1rem 0;
+}
+
+main .date input[type="date"]{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--color-dark);
+    font-family: var(--default-font-family);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* insights section */
+.insights-section .insights-top{
+    margin: 2rem 0;
+}
+.insights-section .insights-bottom .insight-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow-1);
+    border-radius: var(--card-border-radius);
+    padding: 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.insights-section .insights-bottom .insight-card:hover{
+
+    box-shadow: none;
+   
+}
+
+.insights-section .insights-bottom .insight-card .insight-info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.insights-section .insights-bottom .insight-card .insight-icon{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.insights-section .insights-bottom .insight-card.sales .insight-icon{
+    background-color: var(--color-primary);
+}
+.insights-section .insights-bottom .insight-card.expenses .insight-icon{
+    background-color: var(--color-warning);
+}
+.insights-section .insights-bottom .insight-card.income .insight-icon{
+    background-color: var(--color-success);
+}
+
+.insights-section .insights-bottom .insight-card .insight-icon i{
+    font-size: 2rem;
+    color: var(--color-white);
+}
+
+.insights-section .insights-bottom{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.insights-section .insights-bottom .insight-card .progress{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.insights-section .insights-bottom .insight-card .progress svg{
+    width: 7rem;
+    height: 7rem;
+}
+
+.insights-section .insights-bottom .insight-card .progress svg circle{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: var(--color-primary);
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 251.327;
+    stroke-dashoffset: 92;
+}
+.insights-section .insights-bottom .insight-card.sales .progress svg circle{
+    stroke-dasharray: 251.327; /*  for a circle with a radius of 40 and a center point at (50, 50), the circumference would be 2 * pi * 40 = 251.327. */
+    stroke-dashoffset: 62.831; /*To create a progress bar representing 75%, you would set the stroke-dasharray to the circumference of the circle (251.327) and the stroke-dashoffset to 251.327 * (1 - 75 / 100) = 62.831.*/
+}
+.insights-section .insights-bottom .insight-card.expenses .progress svg circle{
+    stroke-dasharray: 251.327;
+    stroke-dashoffset: 188.495;
+}
+.insights-section .insights-bottom .insight-card.income .progress svg circle{
+    stroke-dasharray: 251.327;
+    stroke-dashoffset: 87.930;
+}
+
+.insights-section .insights-bottom .insight-card .progress .precentage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-primary);
+}
+
+.insights-section .insights-bottom .insight-card .progress .precentage span{
+    font-size: 1rem;
+    font-weight: 600;
 }

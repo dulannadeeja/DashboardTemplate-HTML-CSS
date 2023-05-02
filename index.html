@@ -1,122 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- material icon -->
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons"
+      rel="stylesheet"
+    />
     <!-- custome stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- custome javascript -->
     <script src="app.js"></script>
     <title>Dashboard</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <aside class="sidebar">
-            <div class="sidebar-top">
-                <div class="logo">
-                    <i class="material-icons">
-                        logo_dev
-                        </i>
-                        <div class="brand-name">
-                            <h1>Dev<span>Dun</span> </h1>
-                        </div>
-                </div>
-                <div class="close-btn">
-                    <i class="material-icons">
-                        close
-                        </i>
-                </div>
+      <!-- START SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <div class="logo">
+            <i class="material-icons"> logo_dev </i>
+            <div class="brand-name">
+              <h1>Dev<span>Dun</span></h1>
             </div>
-            <div class="sidebar-nav">
-                <ul>
-                    <li class="nav-item">
-                        <a href="#">
-                            <i class="material-icons">
-                                dashboard
-                                </i>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">
-                            <i class="material-icons">
-                                group
-                                </i>
-                            <span>Customers</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="active">
-                            <i class="material-icons">
-                                shopping_cart
-                                </i>
-                            <span>Orders</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">
-                            <i class="material-icons">
-                                insights
-                                </i>
-                            <span>Analytics</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">
-                            <i class="material-icons">
-                                mail
-                                </i>
-                            <span>Messages</span>
-                            <span class="nav-badge small">26</span>
-                        </a>
+          </div>
+          <div class="close-btn">
+            <i class="material-icons"> close </i>
+          </div>
+        </div>
+        <div class="sidebar-nav">
+          <ul>
+            <li class="nav-item">
+              <a href="#">
+                <i class="material-icons"> dashboard </i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <i class="material-icons"> group </i>
+                <span>Customers</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="active">
+                <i class="material-icons"> shopping_cart </i>
+                <span>Orders</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <i class="material-icons"> insights </i>
+                <span>Analytics</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <i class="material-icons"> mail </i>
+                <span>Messages</span>
+                <span class="nav-badge small">26</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <i class="material-icons"> inventory </i>
+                <span>Products</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <i class="material-icons"> report_gmailerrorred </i>
+                <span>Reports</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <i class="material-icons"> settings </i>
+                <span>Settings</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <i class="material-icons"> add </i>
+                <span>Add Product</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <i class="material-icons"> logout </i>
+                <span>Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <!-- END SIDEBAR -->
 
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">
-                            <i class="material-icons">
-                                inventory
-                                </i>
-                            <span>Products</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">
-                            <i class="material-icons">
-                                report_gmailerrorred
-                                </i>
-                            <span>Reports</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">
-                            <i class="material-icons">
-                                settings
-                                </i>
-                            <span>Settings</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">
-                            <i class="material-icons">
-                                add
-                                </i>
-                            <span>Add Product</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">
-                            <i class="material-icons">
-                                logout
-                                </i>
-                            <span>Logout</span>
-                        </a>
-                    </li>
-                </ul>
+      <!-- START MAIN -->
+      <main>
+        <h1>Dashboard</h1>
+        <div class="date">
+            <input type="date" name="date" id="date">
+        </div>
+        <!--START INSIGHTS SECTION -->
+        <section class="insights-section">
+          <div class="insights-top">
+            <div class="insights-top-left">
+              <h2>Insights</h2>
+              <p>Overview of your store's performance</p>
             </div>
-        </aside>
+            <!-- <div class="insights-top-right">
+              <div class="insights-top-right-item">
+                <i class="material-icons"> arrow_back </i>
+                <span>Previous</span>
+              </div>
+              <div class="insights-top-right-item">
+                <span>Today</span>
+                <i class="material-icons"> arrow_drop_down </i>
+              </div>
+              <div class="insights-top-right-item">
+                <span>Next</span>
+                <i class="material-icons"> arrow_forward </i>
+              </div>
+            </div> -->
+          </div>
+          <div class="insights-bottom">
+
+            <!-- start sales insight-->
+            <div class="insights-bottom-item">
+                <div class="insight-card sales">
+                  <div class="insight-info">
+                    <div class="insight-icon">
+                      <i class="material-icons"> analytics </i>
+                    </div>
+                    <h4>Total Sales</h4>
+                    <h2>$12,250</h2>
+                    <small class="text-muted">last 24 hours</small>
+                  </div>
+                  <div class="progress">
+                    <svg viewBox="0 0 100 100">
+                      <circle cx="50" cy="50" r="40" />
+                    </svg>
+                    <div class="precentage">
+                      <h2>75<span>%</span></h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <!-- end sales insight-->
+
+                <!-- start expenses insight-->
+              <div class="insights-bottom-item">
+                <div class="insight-card expenses">
+                  <div class="insight-info">
+                    <div class="insight-icon">
+                      <i class="material-icons"> bar_chart </i>
+                    </div>
+                    <h4>Total Expenses</h4>
+                    <h2>$10,377</h2>
+                    <small>last 24 hours</small>
+                  </div>
+                  <div class="progress">
+                    <svg viewBox="0 0 100 100">
+                      <circle cx="50" cy="50" r="40" />
+                    </svg>
+                    <div class="precentage">
+                      <h2>25<span>%</span></h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <!-- end expenses insight-->
+
+                <!-- start income insight-->
+              <div class="insights-bottom-item">
+                <div class="insight-card income">
+                  <div class="insight-info">
+                    <div class="insight-icon">
+                      <i class="material-icons"> stacked_line_chart </i>
+                    </div>
+                    <h4>Total Income</h4>
+                    <h2>$1,869</h2>
+                    <small>last 24 hours</small>
+                  </div>
+                  <div class="progress">
+                    <svg viewBox="0 0 100 100">
+                      <circle cx="50" cy="50" r="40" />
+                    </svg>
+                    <div class="precentage">
+                      <h2>65<span>%</span></h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <!-- end income insight-->
+          </div>
+        </section>
+        <!--END INSIGHTS SECTION -->
+      </main>
+      <!-- END MAIN -->
+
+      <aside>
+        <p>aside section</p>
+      </aside>
     </div>
-</body>
+  </body>
 </html>
