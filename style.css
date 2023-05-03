@@ -51,6 +51,7 @@ body{
     background-color: var(--color-background);
     user-select: none;
     overflow-x: hidden;
+    color: var(--color-dark);
 }
 
 a{
@@ -64,6 +65,11 @@ img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+h1,h2,h3,h4,h5,h6,small{
+    font-family: var(--default-font-family);
+    color: var(--color-dark);
 }
 
 h1{
@@ -94,6 +100,7 @@ h5{
 h6{
     font-size: 0.8rem;
     font-weight: 300;
+
 }
 
 small{
@@ -101,7 +108,7 @@ small{
     font-weight: 300;
 }
 
-.profile-photo{
+.profile-image{
     width: 2.8rem;
     height: 2.8rem;
     border-radius: 50%;
@@ -166,7 +173,7 @@ b{
    display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 2rem 2rem;
+    margin: 1.4rem 2rem;
 }
 
 .sidebar-top .logo{
@@ -430,4 +437,164 @@ main .date input[type="date"]{
 
 .recent-orders-section .recent-orders-bottom table tbody tr:last-child td{
     border:none;
+}
+
+/* right section */
+.right-section{
+    margin-top: 1.4rem;
+}
+
+.right-section .right-top{
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    gap: 3rem;
+    margin-bottom: 1rem;
+}
+
+.right-section .right-top .right-top-item.collapse-btn{
+    display: none;
+}
+
+.right-section .right-top .right-top-item.theme-toggeler{
+    display: flex;
+    background-color: var(--color-light);
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--border-radius-1);
+}
+
+.right-section .right-top .right-top-item.theme-toggeler .toggeler-item{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-1);
+    padding: 0.3rem 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.right-section .right-top .right-top-item.theme-toggeler .toggeler-item i{
+    font-size: 1.2rem;
+}
+
+.right-section .right-top .right-top-item.theme-toggeler .toggeler-item.active{
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
+
+.right-section .right-top .right-top-item.profile-section{
+    display: flex;
+    gap: 1rem;
+}
+
+
+.right-section .right-middle{
+    margin: 2rem 0rem;
+}
+
+.right-section .right-middle .right-middle-item.recent-updates-section .title{
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.right-section .right-middle .right-middle-item.recent-updates-section .recent-updates-card{
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow-1);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    transition: all 0.3s ease-in-out;
+}
+
+.right-section .right-middle .right-middle-item.recent-updates-section .recent-updates-card:hover{
+    box-shadow: none;
+}
+
+.right-section .right-middle .right-middle-item.recent-updates-section .recent-updates-card .recent-updates-item{
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.right-section .right-bottom .right-bottom-item.sales-analytics-section{
+    margin: 2rem 0;
+}
+
+.right-section .right-bottom .right-bottom-item.sales-analytics-section .title{
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.right-section .right-bottom .right-bottom-item.sales-analytics-section .sales-analytics-card,
+.right-section .right-bottom .right-bottom-item.add-product .add-product-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow-1);
+    border-radius: var(--border-radius-3);
+    padding: 1rem var(--card-padding);
+    margin-bottom: 0.7rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.right-section .right-bottom .right-bottom-item.sales-analytics-section .sales-analytics-card:hover{
+    box-shadow: none;
+}
+
+.right-section .right-bottom .right-bottom-item.sales-analytics-section .sales-analytics-card .right{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.right-section .right-bottom .right-bottom-item.sales-analytics-section .sales-analytics-card .left i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    padding: 0.6rem; 
+}
+
+.right-section .right-bottom .right-bottom-item.sales-analytics-section .sales-analytics-card.online-sales .left i{
+    background-color: var(--color-success);
+}
+.right-section .right-bottom .right-bottom-item.sales-analytics-section .sales-analytics-card.offline-sales .left i{
+    background-color: var(--color-danger);
+}
+.right-section .right-bottom .right-bottom-item.sales-analytics-section .sales-analytics-card.new-customers .left i{
+    background-color: var(--color-warning);
+}
+
+.right-section .right-bottom .right-bottom-item.add-product .add-product-card{
+    background-color: transparent;
+    border: 2px dashed var(--color-primary);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-primary) !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.right-section .right-bottom .right-bottom-item.add-product .add-product-card:hover{
+    box-shadow: none;
+    border: 2px dashed var(--color-primary-varient);
+    color: var(--color-primary-varient) !important;
+}
+
+.right-section .right-bottom .right-bottom-item.add-product .add-product-card p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.right-section .right-bottom .right-bottom-item.add-product .add-product-card:hover p{
+    color: var(--color-primary-varient);
 }
