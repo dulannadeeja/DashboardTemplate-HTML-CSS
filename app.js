@@ -1,6 +1,7 @@
 let isCollapsed=true;
-let closeBtn=document.querySelector("#close-btn");
-let expandBtn=document.querySelector("#expand-btn");
+const closeBtn=document.querySelector("#close-btn");
+const expandBtn=document.querySelector("#expand-btn");
+const themeToggler=document.querySelector("#theme-toggler");
 
 closeBtn.addEventListener("click",()=>{
     console.log("clicked");
@@ -17,3 +18,12 @@ expandBtn.addEventListener("click",()=>{
         isCollapsed=false;
     }
 }); // expand the sidebar
+
+themeToggler.addEventListener("click",()=>{
+    console.log("clicked");
+    document.querySelector("body").classList.toggle("dark-theme-variables");
+    document.querySelector("#lightMode").classList.toggle("active");
+    document.querySelector("#darkMode").classList.toggle("active");
+}); // toggle the theme
+
+

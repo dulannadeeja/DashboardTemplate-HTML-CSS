@@ -28,6 +28,27 @@
   --default-font-family: "Poppins", sans-serif;
 }
 
+/* dark theme variables */
+
+.dark-theme-variables{
+  --color-primary: #219ebc;
+  --color-danger: #e63946;
+  --color-success: #2a9d8f;
+  --color-warning: #fb8500;
+  --color-dark: #dde4e7;
+  --color-light: #002030;
+  --color-white: #000;
+  --color-black: #fff;
+  --color-info-light: #e5e5e5;
+  --color-info-dark: #8d99ae;
+  --color-primary-varient: #84a98c;
+  --color-dark-varient: #48849c;
+  --color-background: #0a0908;
+
+  --box-shadow-1: 0 2rem 3rem var(--color-light);
+
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -467,7 +488,7 @@ main .date input[type="date"] {
   display: none;
 }
 
-.right-section .right-top .right-top-item.theme-toggeler {
+.right-section .right-top .right-top-item.theme-toggler {
   display: flex;
   background-color: var(--color-light);
   justify-content: space-between;
@@ -475,7 +496,7 @@ main .date input[type="date"] {
   border-radius: var(--border-radius-1);
 }
 
-.right-section .right-top .right-top-item.theme-toggeler .toggeler-item {
+.right-section .right-top .right-top-item.theme-toggler .toggler-item {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -485,11 +506,11 @@ main .date input[type="date"] {
   transition: all 0.3s ease-in-out;
 }
 
-.right-section .right-top .right-top-item.theme-toggeler .toggeler-item i {
+.right-section .right-top .right-top-item.theme-toggler .toggler-item i {
   font-size: 1.2rem;
 }
 
-.right-section .right-top .right-top-item.theme-toggeler .toggeler-item.active {
+.right-section .right-top .right-top-item.theme-toggler .toggler-item.active {
   color: var(--color-white);
   background-color: var(--color-primary);
 }
@@ -756,12 +777,19 @@ main .date input[type="date"] {
 
   .sidebar {
     position: fixed;
-    left: 0;
+    left: -18rem;
     width: 18rem;
     z-index: 3;
     height: 100vh;
     padding-right: var(--card-padding);
     display: none;
+    animation: showMenu 0.5s ease forwards;
+  }
+
+  @keyframes showMenu {
+    to{
+      left: 0rem;
+    }
   }
 
   .sidebar-top .close-btn {
