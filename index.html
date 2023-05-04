@@ -11,14 +11,12 @@
     />
     <!-- custome stylesheet -->
     <link rel="stylesheet" href="style.css" />
-    <!-- custome javascript -->
-    <script src="app.js"></script>
     <title>Dashboard</title>
   </head>
   <body>
     <div class="container">
       <!-- START SIDEBAR -->
-      <aside class="sidebar">
+      <aside class="sidebar" id="sidebar">
         <div class="sidebar-top">
           <div class="logo-container">
             <i class="material-icons logo"> logo_dev </i>
@@ -26,7 +24,7 @@
               <h2>Dev<span>Dun</span></h2>
             </div>
           </div>
-          <div class="close-btn">
+          <div class="close-btn" id="close-btn">
             <i class="material-icons"> close </i>
           </div>
         </div>
@@ -295,7 +293,7 @@
       <section class="right-section">
         <div class="right-top">
           <div class="right-top-item collapse-btn">
-            <button>
+            <button id="expand-btn">
               <i class="material-icons"> menu </i>
             </button>
           </div>
@@ -459,5 +457,8 @@
       </section>
       <!-- END RIGHT SECTION -->
     </div>
+
+    <!-- custome javascript -->
+    <script src="app.js"></script>
   </body>
 </html>
